@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6185.11" systemVersion="13E28" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1080" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6185.11"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="SettingsWindow">
+            <connections>
+                <outlet property="chkEuler" destination="8IT-G6-Wf2" id="YN7-sy-vtJ"/>
+                <outlet property="chkWebApps" destination="T9v-mS-huI" id="WSp-qO-4xq"/>
+                <outlet property="jsButton" destination="Dlv-Xr-Ho6" id="Zhc-xU-8M7"/>
+                <outlet property="labelConnection" destination="mhf-0N-1JU" id="YHY-gL-pFd"/>
+                <outlet property="labelFPS" destination="XHt-oc-QQ6" id="zJJ-mT-DZS"/>
+                <outlet property="labelFPSValue" destination="zfh-5N-pJZ" id="9uA-zu-1gn"/>
+                <outlet property="labelRSSI" destination="enq-l2-huQ" id="XkS-8g-gdr"/>
+                <outlet property="labelServer" destination="NOm-6D-GvY" id="hEd-g2-HGb"/>
+                <outlet property="labelServerURL" destination="Gbf-c8-BfI" id="M6T-a9-gG9"/>
+                <outlet property="labelVersion" destination="fd9-Eg-3XV" id="Uuy-Gv-nnm"/>
+                <outlet property="levelRSSI" destination="mur-p7-vs6" id="Cqp-w4-o9j"/>
+                <outlet property="linkButton" destination="DFl-7F-qAz" id="B7T-6X-4Ua"/>
+                <outlet property="logoView" destination="OZu-3R-pdO" id="gK4-Rv-K7N"/>
+                <outlet property="settingsWindow" destination="F0z-JX-Cv5" id="EEb-Uy-XZG"/>
+                <outlet property="stateConnection" destination="WBw-9y-b2a" id="HPf-cC-EhD"/>
+                <outlet property="tabView" destination="M6l-uv-Mfs" id="i6e-do-SaP"/>
+                <outlet property="updateButton" destination="MVk-MS-EJs" id="Qko-5n-95h"/>
+                <outlet property="vibrationButton" destination="uvT-1T-nRM" id="IOS-yh-q8e"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Settings" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="583" height="300"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <value key="minSize" type="size" width="583" height="360"/>
+            <value key="maxSize" type="size" width="583" height="360"/>
+            <view key="contentView" autoresizesSubviews="NO" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="583" height="300"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E9C-OL-g10">
+                        <rect key="frame" x="0.0" y="47" width="583" height="253"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="SettingsBackground" id="nUx-IG-gBw"/>
+                    </imageView>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OZu-3R-pdO" userLabel="Logo">
+                        <rect key="frame" x="45" y="108" width="179" height="179"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="SettingsIcon" id="jnR-IY-lu5"/>
+                    </imageView>
+                    <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DFl-7F-qAz" userLabel="linkButton">
+                        <rect key="frame" x="417" y="10" width="148" height="25"/>
+                        <buttonCell key="cell" type="roundTextured" title="GitHub" bezelStyle="texturedRounded" alignment="center" borderStyle="border" focusRingType="none" inset="2" id="dDR-gw-jqo">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="onButtonSourceClick:" target="-2" id="lDF-ln-Q1a"/>
+                        </connections>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OJb-zI-SiA" userLabel="LabelCopyright">
+                        <rect key="frame" x="258" y="53" width="277" height="28"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="left" id="Czc-at-Yfy">
+                            <font key="font" metaFont="system" size="10"/>
+                            <string key="title">Copyright © 2014 logotype (Victor Norgren).
+All rights reserved.</string>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <tabView fixedFrame="YES" initialItem="oMn-Zs-PQ3" translatesAutoresizingMaskIntoConstraints="NO" id="M6l-uv-Mfs" userLabel="SettingsTabs">
+                        <rect key="frame" x="253" y="83" width="320" height="210"/>
+                        <font key="font" metaFont="system"/>
+                        <tabViewItems>
+                            <tabViewItem label="Connection" identifier="1" id="oMn-Zs-PQ3" userLabel="Connection">
+                                <view key="view" ambiguous="YES" id="Odx-LX-YkT">
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mhf-0N-1JU" userLabel="labelConnection">
+                                            <rect key="frame" x="30" y="-22" width="259" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="left" title="Reading Myo settings..." id="lWN-ha-us0">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XHt-oc-QQ6" userLabel="labelFPS">
+                                            <rect key="frame" x="10" y="-57" width="279" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="left" title="Reading framerate..." id="N70-De-CwL">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zfh-5N-pJZ" userLabel="labelFPS">
+                                            <rect key="frame" x="10" y="-74" width="279" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="left" id="RVR-B1-FsZ">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mur-p7-vs6" userLabel="LevelRSSI">
+                                            <rect key="frame" x="12" y="-110" width="275" height="12"/>
+                                            <levelIndicatorCell key="cell" alignment="left" doubleValue="-100" minValue="-100" maxValue="-30" warningValue="-65" criticalValue="-85" levelIndicatorStyle="relevancy" id="9Qq-LA-dZz"/>
+                                        </levelIndicator>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="enq-l2-huQ" userLabel="labelRSSI">
+                                            <rect key="frame" x="10" y="-95" width="279" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="left" title="Reading RSSI..." id="6bJ-Bu-zaN">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NOm-6D-GvY" userLabel="labelServer">
+                                            <rect key="frame" x="10" y="-137" width="279" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="left" title="WebSocket server" id="9dD-YG-MCV">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gbf-c8-BfI" userLabel="labelServerURL">
+                                            <rect key="frame" x="10" y="-154" width="279" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="left" title="ws://localhost:6450/" id="RCC-Ez-Kn3">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WBw-9y-b2a">
+                                            <rect key="frame" x="12" y="-22" width="15" height="15"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="oPf-4U-FgH"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="Settings" identifier="" id="IUa-cu-9v0" userLabel="Settings">
+                                <view key="view" id="BbM-eE-JvY">
+                                    <rect key="frame" x="10" y="33" width="300" height="164"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T9v-mS-huI">
+                                            <rect key="frame" x="10" y="142" width="275" height="18"/>
+                                            <buttonCell key="cell" type="check" title="Allow web applications" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Vo1-fB-qgB">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="onWebAppsClick:" target="-2" id="Xmw-iz-kxC"/>
+                                            </connections>
+                                        </button>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8IT-G6-Wf2">
+                                            <rect key="frame" x="10" y="117" width="275" height="18"/>
+                                            <buttonCell key="cell" type="check" title="Calculate Euler angles" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="BFg-Da-CGn">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="onEulerClick:" target="-2" id="RFb-dW-XFR"/>
+                                            </connections>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ifT-Lh-C1V">
+                                            <rect key="frame" x="10" y="93" width="275" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Vibration test" id="DpD-OY-MST">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MVk-MS-EJs">
+                                            <rect key="frame" x="10" y="4" width="273" height="25"/>
+                                            <buttonCell key="cell" type="roundTextured" title="Check for updates..." bezelStyle="texturedRounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6dg-6s-4HD">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="checkForUpdates:" target="XY0-Xs-IbF" id="82J-Bx-y9N"/>
+                                            </connections>
+                                        </button>
+                                        <segmentedControl focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uvT-1T-nRM">
+                                            <rect key="frame" x="12" y="66" width="180" height="25"/>
+                                            <segmentedCell key="cell" borderStyle="border" focusRingType="none" alignment="left" style="texturedSquare" trackingMode="momentary" id="Ewh-bD-edn">
+                                                <font key="font" metaFont="system"/>
+                                                <segments>
+                                                    <segment label="Short"/>
+                                                    <segment label="Medium" tag="1"/>
+                                                    <segment label="Long"/>
+                                                </segments>
+                                            </segmentedCell>
+                                            <connections>
+                                                <action selector="onVibrationButtonClick:" target="-2" id="eS6-oD-MQq"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </subviews>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="About" identifier="2" id="g36-NV-UvG" userLabel="About">
+                                <view key="view" autoresizesSubviews="NO" id="bCY-1a-kd0">
+                                    <rect key="frame" x="10" y="33" width="300" height="164"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <scrollView autoresizesSubviews="NO" fixedFrame="YES" placeholderIntrinsicWidth="280" placeholderIntrinsicHeight="154" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="light" translatesAutoresizingMaskIntoConstraints="NO" id="VeL-DM-1vY">
+                                            <rect key="frame" x="10" y="7" width="280" height="154"/>
+                                            <clipView key="contentView" autoresizesSubviews="NO" drawsBackground="NO" copiesOnScroll="NO" id="lXe-nn-BWB">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="154"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <textView drawsBackground="NO" importsGraphics="NO" findStyle="panel" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="R4s-bE-hgY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="264" height="671"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <size key="minSize" width="264" height="154"/>
+                                                        <size key="maxSize" width="463" height="10000000"/>
+                                                        <attributedString key="textStorage">
+                                                            <fragment>
+                                                                <mutableString key="content">1. You and Thalmic Labs are entering into this agreement.
+
+The parties to this agreement are you, on behalf of yourself as an individual and/or as a representative of an employer,
+company or other third party entity (being the party for whose benefit the Myo SDK is being used), and Thalmic Labs
+Inc., an Ontario corporation with principal place of business at 24 Charles Street West, Kitchener, ON N2G 1H2
+(Thalmic).
+
+2. This is a license agreement allowing you to develop Applications using the Myo SDK.
+
+This is a software license agreement for the Myo SDK (meaning the system files, redistributables, libraries, tools,
+APIs, sample code, documentation, and other software materials, as well as any updates to the foregoing, which are made
+available to you by Thalmic in connection with this agreement) for use in developing Applications (meaning any software
+developed, built, created, or otherwise produced using the Myo SDK) for the Myo armband (meaning the MyoTM gesture
+control armband).
+
+3. You can develop Applications as long as you comply with all laws, do not damage us or the Myo SDK in any way, and use
+the Myo SDK the way we have said it is intended to be used.  You are free to copy, distribute, modify, and create
+derivative works of the sample code that we provide and to redistribute the redistributable files that are necessary for
+your Application to run.
+
+Subject to the terms of this agreement, Thalmic grants you a limited, worldwide, royalty-free, non-assignable and non-
+exclusive license to use the Myo SDK solely to develop Applications for the Myo armband.  Your Application and your use
+of the Myo SDK must comply with: (a) this agreement, and (b) any applicable laws, regulations or other mandatory
+requirements applicable to you and the Application (including any laws regarding the export of data or software).
+
+Except to the extent required by applicable third party licenses, you may not: (a) copy (except for backup purposes),
+modify, adapt, redistribute, decompile, reverse engineer, disassemble, or create derivative works of the Myo SDK or any
+part of the Myo SDK.  Notwithstanding the foregoing, you are permitted to modify and/or create derivative works of any
+sample code included in the Myo SDK, to distribute such modifications and/or derivative works of sample code with your
+Application, and, if your employer is bound by this agreement, to copy/redistribute the Myo SDK to other employees of
+your employer.  You are also permitted to redistribute, with your Application, any redistributable file from the Myo SDK
+(such as myo.dll in the Windows version, myo.framework in the Mac version, and the like) that is required in order for
+your Application to run.
+
+You agree that if you use the Myo SDK to develop an Application for general public users, you will protect the privacy
+and legal rights of those users.  You also agree that you will not engage in any illicit or illegal activity with the
+Myo SDK, including the development or distribution of any Application that interferes with, disrupts, damages, or
+accesses in an unauthorized manner the servers, networks, or other properties or services of any third party, including
+Thalmic.
+
+4. There may be software in the Myo SDK owned by third parties (i.e., not Thalmic and not you), so when you use the Myo
+SDK, you need to comply with their license agreements as well.
+
+Use, reproduction and distribution of components of the Myo SDK licensed under a third party software license (including
+but not limited to an open source software license) are governed solely by the terms of that third party software
+license and not this agreement.  Such licenses may be found in the documentation accompanying the Myo SDK.
+
+5. We own everything else having to do with the Myo SDK and the Myo armband (except the third party software mentioned
+in #4 above).
+  
+You agree that Thalmic or third parties own all legal right, title and interest in and to the Myo SDK, including any
+intellectual property rights (patents, copyrights, trademarks, etc.) that subsist in the Myo SDK.  You agree that you
+will not remove, obscure, or alter any proprietary rights notices (including copyright and trademark notices) that may
+be affixed to or contained within the Myo SDK.  Thalmic reserves all rights not expressly granted to you under this
+agreement.
+
+Thalmic reserves the right to discontinue, change or remove features, or change the form and nature of the Myo SDK at
+any time without notice.  Future versions of the Myo SDK may be incompatible with Applications developed on previous
+versions of the Myo SDK.  This agreement may also be modified by Thalmic in future versions of the Myo SDK, and you are
+responsible for ensuring that you and your Application(s) are in compliance with the then-current version.
+
+6. You own your Application.  Ongoing compatibility between your Application and the Myo armband / Myo SDK is your
+responsibility, not the responsibility of Thalmic.  You are also accountable for anything to do with your Application,
+such as how it is developed, licensed or sold, and its operation.
+
+Thalmic agrees that it obtains no right, title or interest from you (or your licensors) under this agreement in or to
+any Application(s) that you develop, including any Intellectual Property Rights that subsist in such Application(s).
+
+You agree that you are solely responsible for (and that Thalmic has no responsibility to you or to any third party for)
+any data, content, or resources that you create, collect, or transmit by a Myo armband and/or by any Application that
+you develop, and for the consequences of your actions (including any loss or damage which Thalmic may suffer) by doing
+so.  You agree that you are solely responsible for the operation, marketing, compatibility, and all other aspects of
+your Application(s), and for complying with all applicable laws regarding such Application(s).  Thalmic expressly
+disclaims all liability for any claims, losses or damages arising from your Application(s) and/or your marketing,
+distribution or other handling of such Application(s), and you agree to indemnify Thalmic against all such claims,
+losses and damages, in accordance with this agreement.
+
+7. We are providing the Myo SDK without any warranties, and you are accepting all risk in using the Myo SDK.  We have no
+liability to you for any damages relating to your use of the Myo SDK.
+
+YOU EXPRESSLY UNDERSTAND AND AGREE THAT YOUR USE OF THE MYO SDK IS AT YOUR SOLE RISK AND THAT THE MYO SDK IS PROVIDED
+"AS IS" AND "AS AVAILABLE" WITHOUT WARRANTY OF ANY KIND FROM THALMIC.  THALMIC EXPRESSLY DISCLAIMS ALL OTHER
+REPRESENTATIONS, WARRANTIES AND CONDITIONS, WHETHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY EXPRESS OR
+IMPLIED REPRESENTATIONS, WARRANTIES OR CONDITIONS OF MERCHANTABILITY, MERCHANTABLE QUALITY, FITNESS FOR A PARTICULAR
+PURPOSE, DURABILITY, TITLE, NON-INFRINGEMENT, OR ANY OTHER WARRANTY OR CONDITION ARISING BY STATUTE, CUSTOM OR USAGE OF
+TRADE RELATED TO THE MYO SDK PROVIDED HEREUNDER.  THALMIC SPECIFICALLY DOES NOT WARRANT THAT THE OPERATION OF THE MYO
+SDK WILL BE UNINTERRUPTED OR ERROR-FREE.  In particular, you acknowledge that Thalmic does not warrant or recommend the
+Myo armband for use in any application (such as vehicular control) for which a failure or fault may result in death,
+personal injury or damage to property.
+
+YOUR USE OF THE MYO SDK AND ANY MATERIAL PRODUCED, DOWNLOADED OR OTHERWISE OBTAINED THROUGH YOUR USE OF THE MYO SDK,
+INCLUDING ANY APPLICATION(S) YOU DEVELOP, IS AT YOUR OWN DISCRETION AND RISK AND YOU ARE SOLELY RESPONSIBLE FOR ANY
+DAMAGE TO ANY PERSON OR PROPERTY OR LOSS OF DATA THAT RESULTS FROM SUCH USE.
+
+Some jurisdictions may not allow the exclusion or limitation of implied warranties and conditions.  To the extent
+permitted by law, any implied warranties or conditions relating to the Myo SDK, to the extent that they cannot be
+excluded as set out above, are limited to thirty (30) days from the date that you first download the Myo SDK.
+
+The only type of damages that can be recovered against Thalmic arising from or related to this agreement (including
+without limitation in relation to the Myo armband, the Myo SDK and your use under this agreement thereof), shall be your
+direct damages, if any, to the extent arising from gross negligence of or wilful misconduct by Thalmic.  In no event
+shall the aggregate liability of Thalmic exceed the amount paid by you for the portion of the Myo SDK that gave rise to
+the claim.  EXCEPT FOR THE LIMITED DIRECT DAMAGES SPECIFIED ABOVE, TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT
+SHALL THALMIC BE LIABLE FOR ANY DAMAGES WHATSOEVER, TO YOU OR TO ANY THIRD PARTY (INCLUDING, WITHOUT LIMITATION,
+INDIRECT, SPECIAL, INCIDENTAL, EXEMPLARY OR CONSEQUENTIAL OR PUNITIVE DAMAGES, FAILURES TO TRANSMIT OR RECEIVE ANY DATA,
+COMPUTER OR MOBILE DEVICE FAILURE, PROBLEMS, LOSS OR DAMAGE ASSOCIATED WITH ANY USE OF THE MYO SDK, YOUR APPLICATION(S),
+OR THE MYO ARMBAND, OR OTHER PECUNIARY LOSS ARISING OUT OF OR RELATED TO THIS AGREEMENT), WHETHER OR NOT SUCH DAMAGES
+WERE FORESEEN OR UNFORESEEN INCLUDING WITHOUT LIMITATION THE USE OF OR INABILITY TO USE THE MYO SDK, EVEN IF THALMIC HAS
+BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+8. We want our customers to have a consistent and enjoyable experience and wish to protect our name and reputation, so
+you need to follow our guidelines in developing your Application and in referencing us or our products.
+
+You agree to follow the guidelines for the naming, branding, and general presentation of Applications for the Myo
+armband, viewable at https://developer.getmyo.com/branding and the guidelines for the user experience provided by
+Applications for the Myo armband, viewable at https://developer.getmyo.com/ux (collectively, the Guidelines).
+
+Thalmic reserves the right to update and/or modify the Guidelines at any time in its sole discretion.  You must ensure
+that any Application that you develop complies with the current Guidelines before you distribute the Application.
+
+Except as otherwise expressly provided herein, you are prohibited from making any references to Thalmic, the Myo
+armband, the Myo SDK, or any other Thalmic products and services (whether in conjunction with your Application or
+otherwise), and especially shall not make any representations, guarantees or warranties to any third party in relation
+to Thalmic, the Myo armband, the Myo SDK, or any other Thalmic products and services.  Except to the limited extent
+provided by the Guidelines, nothing in this agreement gives you a right to use any of the trade names, trademarks,
+service marks, logos, domain names, or other brand features owned by Thalmic.
+
+9. Unless you opt-out, we will be automatically collecting certain information from your use of the Myo SDK to help us
+improve our products and services.  The same goes for users of your Application, and your use of an Application
+developed by a third party.
+
+In order to continually innovate and improve the Myo SDK and/or the Myo armband, Thalmic may collect certain usage
+statistics related to the Myo SDK, Applications, and/or the Myo armband, including without limitation: a unique
+identifier of the Myo armband being used, an associated IP address, a version number of the Myo SDK and/or Application,
+information on which tools and/or services in the Myo SDK and/or Application are being used and how they are being used,
+and/or gesture data collected and stored during use of the Myo SDK and/or Application.  Any or all of this information
+may be transmitted to Thalmic from you unless you opt out of data collection in the Myo Connect application of the Myo
+SDK.  Likewise, any or all of this information may be transmitted to Thalmic from users of your Application unless your
+users opt out of data collection in their personal Myo Connect application.  The data collected is examined in the
+aggregate to improve the Myo SDK and/or the Myo armband and is maintained in accordance with the Thalmic Privacy Policy,
+available at: https://thalmic.com/privacy.
+
+10. As part of your acceptance of risks under this agreement, you bear full responsibility for any claims made against
+us due to your Application and/or your acts or omissions.
+
+You agree to indemnify, defend and hold harmless Thalmic, its parents, subsidiaries, affiliates, officers and employees,
+including costs and attorneys' fees, from any claim or demand made by any third party due to or arising out of: (a) your
+access, use or misuse of the Myo SDK and/or the Myo armband, (b) your Application or other code developed or marketed by
+you in using the Myo SDK, (c) any breach of this agreement by you, (d) the infringement by you, or any third party
+obtaining access to the Myo SDK or Application through you, of any intellectual property or other right of any person or
+entity, or (e) your violation of any third-party rights or any applicable laws.  Thalmic reserves the right, at your
+expense, to assume the exclusive defence and control of any matter otherwise subject to indemnification by you, in which
+event you will cooperate with Thalmic, at your expense, in asserting any available defences.
+
+11. This agreement will continue to apply until terminated by either you or Thalmic.
+
+If you want to terminate this agreement, you may do so by ceasing your use of the Myo SDK.  Thalmic may at any time,
+terminate this agreement with you if: (A) you have breached any provision of this agreement; (B) Thalmic is required to
+do so by law; (C) Thalmic decides to no longer make available the Myo SDK or certain parts of the Myo SDK to users in
+the country in which you are resident or from which you use the Myo SDK; or (D) the provision of the Myo SDK to you by
+Thalmic is, in Thalmic's sole discretion, no longer commercially viable.
+
+When this agreement comes to an end, all of the legal rights, obligations and liabilities that you and Thalmic have
+benefited from, been subject to (or which have accrued over time while this agreement has been in force) or which are
+expressed to continue indefinitely, shall be unaffected by this cessation, and the provisions of paragraph 12 shall
+continue to apply to such rights, obligations and liabilities indefinitely.
+
+12. This section explains how this agreement will be interpreted and enforced.
+
+This agreement constitutes the whole legal agreement between the parties governing your use of the Myo SDK and
+completely replaces any prior agreement(s) between the parties in relation to the Myo SDK.  This agreement is governed
+by the laws of the Province of Ontario, Canada, without regard to conflict of laws provisions, and you agree to submit
+to the exclusive jurisdiction of the courts located in the Province of Ontario, Canada.  The parties expressly agree
+that neither the United Nations Convention on Contracts for the International Sale of Goods nor the Uniform Computer
+Information Transactions Act shall apply to this agreement.  If any part of this agreement is determined to be invalid
+or unenforceable pursuant to applicable law, then the invalid or unenforceable provision will be deemed superseded by a
+valid, enforceable provision that most closely matches the intent of the original provision and the remainder of this
+agreement shall continue in full force and effect.  You agree that if Thalmic does not exercise or enforce any legal
+right or remedy which is contained in this agreement (or which Thalmic has the benefit of under any applicable law),
+this will not be taken to be a waiver of any Thalmic rights and that those rights or remedies will still be available to
+Thalmic.  The rights granted in this agreement may not be assigned or transferred by either party without the prior
+written approval of the other party.  Neither party shall be permitted to delegate their responsibilities or obligations
+under this agreement without the prior written approval of the other party.
+
+-------------------------------
+
+Boost Software License - Version 1.0 - August 17th, 2003
+
+Permission is hereby granted, free of charge, to any person or organization obtaining a copy of the software and accompanying documentation covered by this license (the "Software") to use, reproduce, display, distribute, execute, and transmit the Software, and to prepare derivative works of the Software, and to permit third-parties to whom the Software is furnished to do so, all subject to the following:
+
+The copyright notices in the Software and this entire statement, including the above license grant, this restriction and the following disclaimer, must be included in all copies of the Software, in whole or in part, and all derivative works of the Software, unless such copies or derivative works are solely in the form of machine-executable object code generated by a source language processor.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+-------------------------------
+
+© 2006-2013 Andy Matuschak
+© 2009-2013 Elgato Systems GmbH.
+© 2011-2014 Kornel Lesiński
+© 2014 C.W. Betts
+© 2014 Petroules Corporation, Sparkle Project contributors
+© 2014 Big Nerd Ranch All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+-------------------------------
+
+WebSocket++ Copyright (c) 2013, Peter Thorson. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. Neither the name of the WebSocket++ Project nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL PETER THORSON BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-------------------------------
+
+bspatch.c and bsdiff.c, from bsdiff 4.3:
+© 2003-2005 Colin Percival.
+
+SUDSAVerifier.m:
+© 2011 Mark Hamlin. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted providing that the following conditions are met: 1. Redistributions of source code must retain the above copyright    notice, this list of conditions and the following disclaimer. 2. Redistributions in binary form must reproduce the above copyright    notice, this list of conditions and the following disclaimer in the    documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</mutableString>
+                                                                <attributes>
+                                                                    <font key="NSFont" size="9" name=".LucidaGrandeUI"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <size key="minSize" width="264" height="154"/>
+                                                        <size key="maxSize" width="463" height="10000000"/>
+                                                    </textView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </clipView>
+                                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="cRn-5l-hic">
+                                                <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </scroller>
+                                            <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="OhL-99-5Vo">
+                                                <rect key="frame" x="264" y="0.0" width="16" height="154"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </scroller>
+                                        </scrollView>
+                                    </subviews>
+                                </view>
+                            </tabViewItem>
+                        </tabViewItems>
+                    </tabView>
+                    <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dlv-Xr-Ho6" userLabel="jsButton">
+                        <rect key="frame" x="261" y="10" width="148" height="25"/>
+                        <buttonCell key="cell" type="roundTextured" title="MyoJS" bezelStyle="texturedRounded" alignment="center" borderStyle="border" focusRingType="none" inset="2" id="AXd-Pt-taJ">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="onJSButtonSourceClick:" target="-2" id="dCU-MY-1jh"/>
+                        </connections>
+                    </button>
+                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fd9-Eg-3XV" userLabel="LabelCopyright">
+                        <rect key="frame" x="43" y="53" width="183" height="28"/>
+                        <textFieldCell key="cell" lineBreakMode="charWrapping" allowsUndo="NO" sendsActionOnEndEditing="YES" focusRingType="none" alignment="center" id="BSs-Jz-C85">
+                            <font key="font" metaFont="system" size="10"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+        </window>
+        <customObject id="XY0-Xs-IbF" customClass="SUUpdater"/>
+    </objects>
+    <resources>
+        <image name="SettingsBackground" width="583" height="253"/>
+        <image name="SettingsIcon" width="179" height="179"/>
+    </resources>
+</document>

@@ -1,0 +1,7 @@
+build/myodaemon.build/
+build/myodaemon.app/
+native-osx/build/
+native-osx/libs/websocketpp/*
+!native-osx/libs/websocketpp/websocketpp/
+native-osx/myodaemon.xcodeproj/project.xcworkspace/*
+.DS_Store

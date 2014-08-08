@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" 
+    xmlns:sparkle="https://s3-us-west-1.amazonaws.com/myoupdates/xml-namespaces/sparkle"  
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>myodaemon</title>
+        <link>https://s3-us-west-1.amazonaws.com/myoupdates/updates.xml</link>
+        <description>This is a Websockets daemon for Thalmic Labs Myo.</description>
+        <language>en</language>
+        <item>
+            <title>0.6.3</title>
+            <description>
+				This is a Websockets daemon for Thalmic Labs Myo.
+
+                The Myo armband measures the electrical activity from your muscles to detect what gesture your hand is making. It also senses all of the motions and rotations of your hand and forearm.
+			</description>
+            <pubDate>Wed, 10 Jul 2014 23:30:01 +0000</pubDate>
+            <sparkle:releaseNotesLink>https://s3-us-west-1.amazonaws.com/myoupdates/notes.html</sparkle:releaseNotesLink>
+            <enclosure url="https://s3-us-west-1.amazonaws.com/myoupdates/myodaemon.zip" sparkle:version="75" length="1600000" type="application/octet-stream" sparkle:dsaSignature="MC0CFHh+Ipu+2A7FwjpK0tbYAOgG3cN4AhUAuuf9i0runf+PIj6QXnhTPBFOhl4=" />
+        </item>
+    </channel>
+</rss>
