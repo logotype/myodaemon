@@ -135,13 +135,13 @@
 #pragma mark IB Actions
 
 - (IBAction)onButtonSourceClick:(id)sender {
-    NSURL *url = [NSURL URLWithString:@"https://github.com/thalmic-alpha/myodaemon"];
+    NSURL *url = [NSURL URLWithString:@"https://github.com/logotype/myodaemon"];
     if( ![[NSWorkspace sharedWorkspace] openURL:url] )
         NSLog(@"Failed to open url: %@",[url description]);
 }
 
 - (IBAction)onJSButtonSourceClick:(id)sender {
-    NSURL *url = [NSURL URLWithString:@"https://github.com/thalmic-alpha/myoJS-VN"];
+    NSURL *url = [NSURL URLWithString:@"https://github.com/logotype/myoJS"];
     if( ![[NSWorkspace sharedWorkspace] openURL:url] )
         NSLog(@"Failed to open url: %@",[url description]);
 }
