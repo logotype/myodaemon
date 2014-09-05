@@ -8,15 +8,15 @@
         <description>This is a Websockets daemon for Thalmic Labs Myo.</description>
         <language>en</language>
         <item>
-            <title>0.8.6</title>
+            <title>0.8.7</title>
             <description>
 				This is a Websockets daemon for Thalmic Labs Myo.
 
                 The Myo armband measures the electrical activity from your muscles to detect what gesture your hand is making. It also senses all of the motions and rotations of your hand and forearm.
 			</description>
-            <pubDate>Wed, 15 Aug 2014 21:26:01 +0000</pubDate>
+            <pubDate>Fri, 5 Sep 2014 22:50:01 +0000</pubDate>
             <sparkle:releaseNotesLink>https://s3-us-west-1.amazonaws.com/myoupdates/notes.html</sparkle:releaseNotesLink>
-            <enclosure url="https://s3-us-west-1.amazonaws.com/myoupdates/myodaemon.zip" sparkle:version="75" length="1600000" type="application/octet-stream" sparkle:dsaSignature="MC0CFHI/FIQ1WLZFBbQ01yrenLHjpdl3AhUAqksnPLoYP1owZ1PMRHAH2uXiM/Q=" />
+            <enclosure url="https://s3-us-west-1.amazonaws.com/myoupdates/myodaemon.zip" sparkle:version="75" length="1600000" type="application/octet-stream" sparkle:dsaSignature="MC0CFQDOZqxNBBZuvVTuXwFKsBlGWRE67wIUWw0GnaSeACeuzOK1atKNzffCDZ4=" />
         </item>
     </channel>
 </rss>

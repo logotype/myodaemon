@@ -41,6 +41,16 @@ void DeviceListener::onPair(myo::Myo *myo, uint64_t timestamp)
     sendData();
 }
 
+/// Called when a Myo has been paired.
+void DeviceListener::onUnpair(myo::Myo *myo, uint64_t timestamp)
+{
+    NSLog(@"onUnpair");
+    NSDictionary *eventDictionary = [[NSMutableDictionary alloc] init];
+    [eventDictionary setValue:@"onUnpair" forKey:@"type"];
+    [frame setValue:eventDictionary forKey:@"event"];
+    sendData();
+}
+
 /// Called when a paired Myo has been connected.
 void DeviceListener::onConnect(myo::Myo *myo, uint64_t timestamp)
 {

@@ -21,6 +21,9 @@ public:
     /// Called when a Myo has been paired.
     void onPair(myo::Myo *myo, uint64_t timestamp);
     
+    /// Called when a Myo has been paired.
+    void onUnpair(myo::Myo *myo, uint64_t timestamp);
+    
     /// Called when a paired Myo has been connected.
     void onConnect(myo::Myo *myo, uint64_t timestamp);
     
