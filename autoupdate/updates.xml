@@ -16,7 +16,7 @@
 			</description>
             <pubDate>Fri, 5 Sep 2014 22:50:01 +0000</pubDate>
             <sparkle:releaseNotesLink>https://s3-us-west-1.amazonaws.com/myoupdates/notes.html</sparkle:releaseNotesLink>
-            <enclosure url="https://s3-us-west-1.amazonaws.com/myoupdates/myodaemon.zip" sparkle:version="75" length="1600000" type="application/octet-stream" sparkle:dsaSignature="MC0CFQDOZqxNBBZuvVTuXwFKsBlGWRE67wIUWw0GnaSeACeuzOK1atKNzffCDZ4=" />
+            <enclosure url="https://s3-us-west-1.amazonaws.com/myoupdates/myodaemon.zip" sparkle:version="75" length="1600000" type="application/octet-stream" sparkle:dsaSignature="MC0CFQCwvr5azmP2pReMAiCynfb+fpcJJwIUHLRLfBKueBpDUo6f25GZNVVfk7I=" />
         </item>
     </channel>
 </rss>

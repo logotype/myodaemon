@@ -4,4 +4,5 @@ native-osx/build/
 native-osx/libs/websocketpp/*
 !native-osx/libs/websocketpp/websocketpp/
 native-osx/myodaemon.xcodeproj/project.xcworkspace/*
+autoupdate/myodaemon.zip
 .DS_Store
