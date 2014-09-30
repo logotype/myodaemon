@@ -425,7 +425,7 @@
 					"-lboost_thread",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SDKROOT = macosx10.9;
 				SYMROOT = "$(PROJECT_DIR)/../build/";
 				WRAPPER_EXTENSION = app;
 			};
@@ -468,7 +468,7 @@
 					"-lboost_thread",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SDKROOT = macosx10.9;
 				SYMROOT = "$(PROJECT_DIR)/../build/";
 				WRAPPER_EXTENSION = app;
 			};
