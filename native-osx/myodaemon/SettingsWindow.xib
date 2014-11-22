@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6185.11" systemVersion="13E28" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6246" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="1080" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6185.11"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6246"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="SettingsWindow">
@@ -23,7 +23,6 @@
                 <outlet property="settingsWindow" destination="F0z-JX-Cv5" id="EEb-Uy-XZG"/>
                 <outlet property="stateConnection" destination="WBw-9y-b2a" id="HPf-cC-EhD"/>
                 <outlet property="tabView" destination="M6l-uv-Mfs" id="i6e-do-SaP"/>
-                <outlet property="updateButton" destination="MVk-MS-EJs" id="Qko-5n-95h"/>
                 <outlet property="vibrationButton" destination="uvT-1T-nRM" id="IOS-yh-q8e"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
@@ -34,7 +33,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="583" height="300"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <value key="minSize" type="size" width="583" height="360"/>
             <value key="maxSize" type="size" width="583" height="360"/>
             <view key="contentView" autoresizesSubviews="NO" id="se5-gp-TjO">
@@ -169,16 +168,6 @@ All rights reserved.</string>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MVk-MS-EJs">
-                                            <rect key="frame" x="10" y="4" width="273" height="25"/>
-                                            <buttonCell key="cell" type="roundTextured" title="Check for updates..." bezelStyle="texturedRounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6dg-6s-4HD">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="checkForUpdates:" target="XY0-Xs-IbF" id="82J-Bx-y9N"/>
-                                            </connections>
-                                        </button>
                                         <segmentedControl focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uvT-1T-nRM">
                                             <rect key="frame" x="12" y="66" width="180" height="25"/>
                                             <segmentedCell key="cell" borderStyle="border" focusRingType="none" alignment="left" style="texturedSquare" trackingMode="momentary" id="Ewh-bD-edn">
@@ -459,7 +448,7 @@ THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED WAR
                                                 <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
-                                            <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="OhL-99-5Vo">
+                                            <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="OhL-99-5Vo">
                                                 <rect key="frame" x="264" y="0.0" width="16" height="154"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
@@ -493,7 +482,6 @@ THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED WAR
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
         </window>
-        <customObject id="XY0-Xs-IbF" customClass="SUUpdater"/>
     </objects>
     <resources>
         <image name="SettingsBackground" width="583" height="253"/>

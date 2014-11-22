@@ -20,7 +20,6 @@
 @property (strong) IBOutlet NSLevelIndicator *levelRSSI;
 @property (strong) IBOutlet NSButton *linkButton;
 @property (strong) IBOutlet NSButton *jsButton;
-@property (strong) IBOutlet NSButton *updateButton;
 @property (strong) IBOutlet NSSegmentedControl *vibrationButton;
 @property (strong) IBOutlet NSButton *chkEuler;
 @property (strong) IBOutlet NSButton *chkWebApps;

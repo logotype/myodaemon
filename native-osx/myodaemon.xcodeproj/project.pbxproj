@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		371A5EFA196D8B2800669168 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 371A5EF9196D8B2800669168 /* dsa_pub.pem */; };
 		371EF84A198D629B0020499E /* myo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371EF849198D629B0020499E /* myo.framework */; };
 		371EF84B198D6A340020499E /* myo.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 371EF849198D629B0020499E /* myo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3749465419455AD800111541 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3749465319455AD800111541 /* Cocoa.framework */; };
@@ -19,11 +18,9 @@
 		3749468E19455B2E00111541 /* DataHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3749468819455B2E00111541 /* DataHandler.cpp */; };
 		3749468F19455B2E00111541 /* DeviceListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3749468A19455B2E00111541 /* DeviceListener.cpp */; };
 		3749469019455B2E00111541 /* MyoWebsocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3749468C19455B2E00111541 /* MyoWebsocket.cpp */; };
-		374F4455196466D200365797 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 378207571963041800EBA54C /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		375DCFDC1960809400A6446F /* assets-bundled in Resources */ = {isa = PBXBuildFile; fileRef = 375DCFDB1960809400A6446F /* assets-bundled */; };
 		3773F74F1945FCB100C6A287 /* SettingsWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3773F74D1945FCB100C6A287 /* SettingsWindow.m */; };
 		3773F7501945FCB100C6A287 /* SettingsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3773F74E1945FCB100C6A287 /* SettingsWindow.xib */; };
-		378207581963041800EBA54C /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378207571963041800EBA54C /* Sparkle.framework */; };
 		37BBA5791947703E00B0D357 /* JSONVisualizerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BBA5771947703E00B0D357 /* JSONVisualizerWindow.m */; };
 		37BBA57A1947703E00B0D357 /* JSONVisualizerWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37BBA5781947703E00B0D357 /* JSONVisualizerWindow.xib */; };
 		37BBA57C1947748000B0D357 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37BBA57B1947748000B0D357 /* WebKit.framework */; };
@@ -39,14 +36,12 @@
 			dstSubfolderSpec = 10;
 			files = (
 				371EF84B198D6A340020499E /* myo.framework in CopyFiles */,
-				374F4455196466D200365797 /* Sparkle.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		371A5EF9196D8B2800669168 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsa_pub.pem; path = "../assets-bundled/dsa_pub.pem"; sourceTree = "<group>"; };
 		371EF849198D629B0020499E /* myo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = myo.framework; path = libs/myo.framework; sourceTree = "<group>"; };
 		37481DE61958224500C04646 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = SOURCE_ROOT; };
 		3749465019455AD800111541 /* myodaemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myodaemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,7 +68,6 @@
 		3773F74C1945FCB100C6A287 /* SettingsWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsWindow.h; sourceTree = "<group>"; };
 		3773F74D1945FCB100C6A287 /* SettingsWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsWindow.m; sourceTree = "<group>"; };
 		3773F74E1945FCB100C6A287 /* SettingsWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsWindow.xib; sourceTree = "<group>"; };
-		378207571963041800EBA54C /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = libs/Sparkle.framework; sourceTree = "<group>"; };
 		3795AF0E1947315500947226 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		37BBA5761947703E00B0D357 /* JSONVisualizerWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONVisualizerWindow.h; sourceTree = "<group>"; };
 		37BBA5771947703E00B0D357 /* JSONVisualizerWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONVisualizerWindow.m; sourceTree = "<group>"; };
@@ -90,7 +84,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				371EF84A198D629B0020499E /* myo.framework in Frameworks */,
-				378207581963041800EBA54C /* Sparkle.framework in Frameworks */,
 				37BBA57C1947748000B0D357 /* WebKit.framework in Frameworks */,
 				3749465419455AD800111541 /* Cocoa.framework in Frameworks */,
 			);
@@ -121,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				371EF849198D629B0020499E /* myo.framework */,
-				378207571963041800EBA54C /* Sparkle.framework */,
 				37EA41BD195C574E00812A6D /* QuartzCore.framework */,
 				3749465519455AD800111541 /* Other Frameworks */,
 			);
@@ -160,7 +152,6 @@
 		3749465A19455AD800111541 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				371A5EF9196D8B2800669168 /* dsa_pub.pem */,
 				3749465B19455AD800111541 /* myodaemon-Info.plist */,
 				3749465C19455AD800111541 /* InfoPlist.strings */,
 				3749465F19455AD800111541 /* main.m */,
@@ -255,7 +246,6 @@
 				37BBA57A1947703E00B0D357 /* JSONVisualizerWindow.xib in Resources */,
 				375DCFDC1960809400A6446F /* assets-bundled in Resources */,
 				3749465E19455AD800111541 /* InfoPlist.strings in Resources */,
-				371A5EFA196D8B2800669168 /* dsa_pub.pem in Resources */,
 				3749466C19455AD800111541 /* Images.xcassets in Resources */,
 				37EBE3D319531E6E005F7AD9 /* Localizable.strings in Resources */,
 				37BBA57E194774D100B0D357 /* visualizer in Resources */,
