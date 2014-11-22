@@ -31,10 +31,10 @@ public:
     void onDisconnect(myo::Myo *myo, uint64_t timestamp);
     
     /// Called when a paired Myo recognizes that it is on an arm.
-    void onArmRecognized(myo::Myo* myo, uint64_t timestamp, myo::Arm arm, myo::XDirection xDirection);
+    void onArmSync(myo::Myo* myo, uint64_t timestamp, myo::Arm arm, myo::XDirection xDirection);
     
     /// Called when a paired Myo is moved or removed from the arm.
-    void onArmLost(myo::Myo* myo, uint64_t timestamp);
+    void onArmUnsync(myo::Myo* myo, uint64_t timestamp);
     
     /// Called when a paired Myo has provided a new pose.
     void onPose(myo::Myo *myo, uint64_t timestamp, myo::Pose pose);

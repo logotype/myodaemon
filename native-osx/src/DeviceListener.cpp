@@ -72,9 +72,9 @@ void DeviceListener::onDisconnect(myo::Myo *myo, uint64_t timestamp)
 }
 
 /// Called when a paired Myo recognizes that it is on an arm.
-void DeviceListener::onArmRecognized(myo::Myo* myo, uint64_t timestamp, myo::Arm arm, myo::XDirection xDirection)
+void DeviceListener::onArmSync(myo::Myo* myo, uint64_t timestamp, myo::Arm arm, myo::XDirection xDirection)
 {
-    NSLog(@"onArmRecognized");
+    NSLog(@"onArmSync");
     NSString* whichArm;
     switch (arm) {
         case myo::armLeft:
@@ -106,7 +106,7 @@ void DeviceListener::onArmRecognized(myo::Myo* myo, uint64_t timestamp, myo::Arm
     }
     
     NSDictionary *eventDictionary = [[NSMutableDictionary alloc] init];
-    [eventDictionary setValue:@"onArmRecognized" forKey:@"type"];
+    [eventDictionary setValue:@"onArmSync" forKey:@"type"];
 
     [eventDictionary setValue:whichArm forKey:@"arm"];
     [eventDictionary setValue:whichDirection forKey:@"xDirection"];
@@ -116,11 +116,11 @@ void DeviceListener::onArmRecognized(myo::Myo* myo, uint64_t timestamp, myo::Arm
 }
 
 /// Called when a paired Myo is moved or removed from the arm.
-void DeviceListener::onArmLost(myo::Myo* myo, uint64_t timestamp)
+void DeviceListener::onArmUnsync(myo::Myo* myo, uint64_t timestamp)
 {
-    NSLog(@"onArmLost");
+    NSLog(@"onArmUnsync");
     NSDictionary *eventDictionary = [[NSMutableDictionary alloc] init];
-    [eventDictionary setValue:@"onArmLost" forKey:@"type"];
+    [eventDictionary setValue:@"onArmUnsync" forKey:@"type"];
     [frame setValue:eventDictionary forKey:@"event"];
     sendData();
 }

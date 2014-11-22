@@ -225,7 +225,7 @@
 		3749464819455AD800111541 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = logotype;
 			};
 			buildConfigurationList = 3749464B19455AD800111541 /* Build configuration list for PBXProject "myodaemon" */;
@@ -425,7 +425,7 @@
 					"-lboost_thread",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.9;
+				SDKROOT = macosx;
 				SYMROOT = "$(PROJECT_DIR)/../build/";
 				WRAPPER_EXTENSION = app;
 			};
@@ -468,7 +468,7 @@
 					"-lboost_thread",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.9;
+				SDKROOT = macosx;
 				SYMROOT = "$(PROJECT_DIR)/../build/";
 				WRAPPER_EXTENSION = app;
 			};
