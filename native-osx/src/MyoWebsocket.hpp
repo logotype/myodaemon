@@ -21,6 +21,9 @@ public:
     static void requestRSSIHandler(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo);
     static void requestDeviceInfoHandler(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo);
     static void vibrateHandler(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo);
+    static void unlockHandler(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo);
+    static void lockHandler(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo);
+    static void notifyUserActionHandler(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo);
     static void tryConnectHandler(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo);
 
     void run();
@@ -29,6 +32,9 @@ public:
     void requestRSSI();
     void requestDeviceInfo();
     void vibrate(int vibrateLength);
+    void unlock(int unlockValue);
+    void lock();
+    void notifyUserAction();
 private:
 };
 #endif /* defined(__MyoWebsocket__) */

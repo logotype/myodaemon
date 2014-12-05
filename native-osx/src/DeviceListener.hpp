@@ -36,6 +36,12 @@ public:
     /// Called when a paired Myo is moved or removed from the arm.
     void onArmUnsync(myo::Myo* myo, uint64_t timestamp);
     
+    /// Called when a paired Myo becomes unlocked.
+    void onUnlock(myo::Myo* myo, uint64_t timestamp);
+    
+    /// Called when a paired Myo becomes locked.
+    void onLock(myo::Myo* myo, uint64_t timestamp);
+    
     /// Called when a paired Myo has provided a new pose.
     void onPose(myo::Myo *myo, uint64_t timestamp, myo::Pose pose);
     

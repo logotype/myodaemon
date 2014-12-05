@@ -125,6 +125,26 @@ void DeviceListener::onArmUnsync(myo::Myo* myo, uint64_t timestamp)
     sendData();
 }
 
+/// Called when a paired Myo becomes unlocked.
+void DeviceListener::onUnlock(myo::Myo* myo, uint64_t timestamp)
+{
+    NSLog(@"onUnlock");
+    NSDictionary *eventDictionary = [[NSMutableDictionary alloc] init];
+    [eventDictionary setValue:@"onUnlock" forKey:@"type"];
+    [frame setValue:eventDictionary forKey:@"event"];
+    sendData();
+}
+
+/// Called when a paired Myo becomes locked.
+void DeviceListener::onLock(myo::Myo* myo, uint64_t timestamp)
+{
+    NSLog(@"onLock");
+    NSDictionary *eventDictionary = [[NSMutableDictionary alloc] init];
+    [eventDictionary setValue:@"onLock" forKey:@"type"];
+    [frame setValue:eventDictionary forKey:@"event"];
+    sendData();
+}
+
 /// Called when a paired Myo has provided a new pose.
 void DeviceListener::onPose(myo::Myo *myo, uint64_t timestamp, myo::Pose pose)
 {

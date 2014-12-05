@@ -31,6 +31,21 @@ void MyoWebsocket::vibrateHandler(CFNotificationCenterRef center, void *observer
     (static_cast<MyoWebsocket *>(observer))->vibrate(vibrateValue);
 }
 
+void MyoWebsocket::unlockHandler(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
+    
+    NSDictionary *userInfoDictionary = (__bridge NSDictionary*)userInfo;
+    int unlockValue = (int)[[userInfoDictionary objectForKey:@"unlockValue"] integerValue];
+    (static_cast<MyoWebsocket *>(observer))->unlock(unlockValue);
+}
+
+void MyoWebsocket::lockHandler(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
+    (static_cast<MyoWebsocket *>(observer))->lock();
+}
+
+void MyoWebsocket::notifyUserActionHandler(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
+    (static_cast<MyoWebsocket *>(observer))->notifyUserAction();
+}
+
 void MyoWebsocket::tryConnectHandler(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
     (static_cast<MyoWebsocket *>(observer))->tryConnect();
 }
@@ -50,7 +65,10 @@ void MyoWebsocket::run() {
     // Listen for device information from websocket
     CFNotificationCenterAddObserver(CFNotificationCenterGetLocalCenter(), this, MyoWebsocket::requestDeviceInfoHandler, (CFStringRef)kCmdRequestDeviceInfo, NULL, CFNotificationSuspensionBehaviorDeliverImmediately);
     CFNotificationCenterAddObserver(CFNotificationCenterGetLocalCenter(), this, MyoWebsocket::vibrateHandler, (CFStringRef)kCmdVibrate, NULL, CFNotificationSuspensionBehaviorDeliverImmediately);
-    
+    CFNotificationCenterAddObserver(CFNotificationCenterGetLocalCenter(), this, MyoWebsocket::unlockHandler, (CFStringRef)kCmdUnlock, NULL, CFNotificationSuspensionBehaviorDeliverImmediately);
+    CFNotificationCenterAddObserver(CFNotificationCenterGetLocalCenter(), this, MyoWebsocket::lockHandler, (CFStringRef)kCmdLock, NULL, CFNotificationSuspensionBehaviorDeliverImmediately);
+    CFNotificationCenterAddObserver(CFNotificationCenterGetLocalCenter(), this, MyoWebsocket::notifyUserActionHandler, (CFStringRef)kCmdNotifyUserAction, NULL, CFNotificationSuspensionBehaviorDeliverImmediately);
+
     // Listen for device information from websocket
     CFNotificationCenterAddObserver(CFNotificationCenterGetLocalCenter(), this, MyoWebsocket::tryConnectHandler, (CFStringRef)kTryConnect, NULL, CFNotificationSuspensionBehaviorDeliverImmediately);
 
@@ -170,4 +188,40 @@ void MyoWebsocket::vibrate(int vibrateLength) {
         default:
             break;
     }
+}
+
+void MyoWebsocket::unlock(int unlockValue) {
+    if (!isConnected || myo == NULL) {
+        std::cout << "MyoWebsocket::unlock: not connected" << std::endl;
+        return;
+    }
+    std::cout << "MyoWebsocket::unlock: Option " << unlockValue << std::endl;
+    switch (unlockValue) {
+        case 0:
+            myo->unlock(myo::Myo::unlockTimed);
+            break;
+        case 1:
+            myo->unlock(myo::Myo::unlockHold);
+            break;
+        default:
+            break;
+    }
+}
+
+void MyoWebsocket::lock() {
+    if (!isConnected || myo == NULL) {
+        std::cout << "MyoWebsocket::lock: not connected" << std::endl;
+        return;
+    }
+    std::cout << "MyoWebsocket::lock: " << std::endl;
+    myo->lock();
+}
+
+void MyoWebsocket::notifyUserAction() {
+    if (!isConnected || myo == NULL) {
+        std::cout << "MyoWebsocket::notifyUserAction: not connected" << std::endl;
+        return;
+    }
+    std::cout << "MyoWebsocket::notifyUserAction: " << std::endl;
+    myo->notifyUserAction();
 }

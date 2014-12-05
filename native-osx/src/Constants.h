@@ -22,3 +22,6 @@
 // Websocket commands
 #define kCmdRequestDeviceInfo @"requestDeviceInfo"
 #define kCmdVibrate @"vibrate"
+#define kCmdUnlock @"unlock"
+#define kCmdLock @"lock"
+#define kCmdNotifyUserAction @"notifyUserAction"

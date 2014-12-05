@@ -69,6 +69,17 @@ JSON protocol
     }
 ```
 
+Building myodaemon and updating the Myo Framework (OS X)
+--------------------------------------------------------
+
+1. Clone the repository at https://github.com/logotype/myodaemon
+2. Download the newest Myo SDK from https://developer.thalmic.com/downloads
+3. Replace ```myo.framework``` in ```myodaemon/native-osx/libs/``` with the new downloaded framework
+4. Open the included XCode -project from ```myodaemon/native-osx/```
+5. Bump the build version accordingly (forks might be ahead of the current master branch)
+6. Run 'Product > Build for > Running' in XCode to build
+7. Replace your old myodaemon with the resulting one found in ```myodaemon/build/```
+
 
 Authors
 -------

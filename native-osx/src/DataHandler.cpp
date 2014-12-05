@@ -107,9 +107,9 @@ void DataHandler::on_message(connection_hdl hdl, server::message_ptr msg) {
         if([command isEqualTo:kCmdRequestDeviceInfo]) {
             CFNotificationCenterPostNotification(CFNotificationCenterGetLocalCenter(), (CFStringRef)kCmdRequestDeviceInfo, NULL, NULL, YES);
         }
-
+        
         if([command isEqualTo:kCmdVibrate]) {
-
+            
             NSArray *args = [parsedJSON objectForKey:@"args"];
             NSString *vibrateLengthString = [args objectAtIndex:0];
             
@@ -118,6 +118,26 @@ void DataHandler::on_message(connection_hdl hdl, server::message_ptr msg) {
             CFMutableDictionaryRef dictionary = CFDictionaryCreateMutable(kCFAllocatorDefault, 1, &keyCallbacks, &valueCallbacks);
             CFDictionaryAddValue(dictionary, CFSTR("vibrateValue"), (CFStringRef)vibrateLengthString);
             CFNotificationCenterPostNotification(CFNotificationCenterGetLocalCenter(), (CFStringRef)kCmdVibrate, NULL, dictionary, TRUE);
+        }
+        
+        if([command isEqualTo:kCmdUnlock]) {
+            
+            NSArray *args = [parsedJSON objectForKey:@"args"];
+            NSString *unlockString = [args objectAtIndex:0];
+            
+            CFDictionaryKeyCallBacks keyCallbacks = {0, NULL, NULL, CFCopyDescription, CFEqual, NULL};
+            CFDictionaryValueCallBacks valueCallbacks  = {0, NULL, NULL, CFCopyDescription, CFEqual};
+            CFMutableDictionaryRef dictionary = CFDictionaryCreateMutable(kCFAllocatorDefault, 1, &keyCallbacks, &valueCallbacks);
+            CFDictionaryAddValue(dictionary, CFSTR("unlockValue"), (CFStringRef)unlockString);
+            CFNotificationCenterPostNotification(CFNotificationCenterGetLocalCenter(), (CFStringRef)kCmdUnlock, NULL, dictionary, TRUE);
+        }
+        
+        if([command isEqualTo:kCmdLock]) {
+            CFNotificationCenterPostNotification(CFNotificationCenterGetLocalCenter(), (CFStringRef)kCmdLock, NULL, NULL, YES);
+        }
+        
+        if([command isEqualTo:kCmdNotifyUserAction]) {
+            CFNotificationCenterPostNotification(CFNotificationCenterGetLocalCenter(), (CFStringRef)kCmdNotifyUserAction, NULL, NULL, YES);
         }
     }
     
