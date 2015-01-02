@@ -160,6 +160,17 @@
     CFRelease(dictionary);
 }
 
+- (IBAction)onEMGClick:(id)sender {
+    NSString *receiveEMGString = [NSString stringWithFormat:@"%ld", (long)[_chkEMG state]];
+    
+    CFDictionaryKeyCallBacks keyCallbacks = {0, NULL, NULL, CFCopyDescription, CFEqual, NULL};
+    CFDictionaryValueCallBacks valueCallbacks  = {0, NULL, NULL, CFCopyDescription, CFEqual};
+    CFMutableDictionaryRef dictionary = CFDictionaryCreateMutable(kCFAllocatorDefault, 1, &keyCallbacks, &valueCallbacks);
+    CFDictionaryAddValue(dictionary, CFSTR("toggleEMG"), (CFStringRef)receiveEMGString);
+    CFNotificationCenterPostNotification(CFNotificationCenterGetLocalCenter(), (CFStringRef)kToggleEMG, NULL, dictionary, TRUE);
+    CFRelease(dictionary);
+}
+
 - (IBAction)onVibrationButtonClick:(id)sender {
     
     NSString *vibrateLengthString = [NSString stringWithFormat:@"%ld", [_vibrationButton selectedSegment]];

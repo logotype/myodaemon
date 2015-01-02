@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6246" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14C81h" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6246"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="SettingsWindow">
             <connections>
+                <outlet property="chkEMG" destination="OEA-nr-kN1" id="QJL-Lu-aAd"/>
                 <outlet property="chkEuler" destination="8IT-G6-Wf2" id="YN7-sy-vtJ"/>
                 <outlet property="chkWebApps" destination="T9v-mS-huI" id="WSp-qO-4xq"/>
                 <outlet property="jsButton" destination="Dlv-Xr-Ho6" id="Zhc-xU-8M7"/>
@@ -73,7 +74,7 @@ All rights reserved.</string>
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
                             <tabViewItem label="Connection" identifier="1" id="oMn-Zs-PQ3" userLabel="Connection">
-                                <view key="view" ambiguous="YES" id="Odx-LX-YkT">
+                                <view key="view" id="Odx-LX-YkT">
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mhf-0N-1JU" userLabel="labelConnection">
@@ -160,8 +161,18 @@ All rights reserved.</string>
                                                 <action selector="onEulerClick:" target="-2" id="RFb-dW-XFR"/>
                                             </connections>
                                         </button>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OEA-nr-kN1">
+                                            <rect key="frame" x="10" y="92" width="275" height="18"/>
+                                            <buttonCell key="cell" type="check" title="Receive EMG data" bezelStyle="regularSquare" imagePosition="left" inset="2" id="J2W-YS-VKg">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="onEMGClick:" target="-2" id="AOY-cO-5sx"/>
+                                            </connections>
+                                        </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ifT-Lh-C1V">
-                                            <rect key="frame" x="10" y="93" width="275" height="17"/>
+                                            <rect key="frame" x="10" y="68" width="275" height="17"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Vibration test" id="DpD-OY-MST">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -169,7 +180,7 @@ All rights reserved.</string>
                                             </textFieldCell>
                                         </textField>
                                         <segmentedControl focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uvT-1T-nRM">
-                                            <rect key="frame" x="12" y="66" width="180" height="25"/>
+                                            <rect key="frame" x="12" y="41" width="180" height="25"/>
                                             <segmentedCell key="cell" borderStyle="border" focusRingType="none" alignment="left" style="texturedSquare" trackingMode="momentary" id="Ewh-bD-edn">
                                                 <font key="font" metaFont="system"/>
                                                 <segments>

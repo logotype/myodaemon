@@ -217,6 +217,13 @@ void DeviceListener::onRssi(myo::Myo *myo, uint64_t timestamp, int8_t rssi)
     sendData();
 }
 
+/// Called when a paired Myo has provided new EMG data.
+void DeviceListener::onEmgData(myo::Myo *myo, uint64_t timestamp, const int8_t* emg)
+{
+    NSArray *emgData = [[NSArray alloc] initWithObjects:@(emg[0]),@(emg[1]),@(emg[2]),@(emg[3]),@(emg[4]),@(emg[5]),@(emg[6]),@(emg[7]), nil];
+    [frame setValue:emgData forKey:@"emg"];
+}
+
 void DeviceListener::sendData(bool removeData)
 {
     // Calculate framerate

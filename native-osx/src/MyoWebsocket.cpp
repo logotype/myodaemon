@@ -50,6 +50,13 @@ void MyoWebsocket::tryConnectHandler(CFNotificationCenterRef center, void *obser
     (static_cast<MyoWebsocket *>(observer))->tryConnect();
 }
 
+void MyoWebsocket::toggleEMGHandler(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
+    
+    NSDictionary *userInfoDictionary = (__bridge NSDictionary*)userInfo;
+    int toggleEMGValue = (int)[[userInfoDictionary objectForKey:@"toggleEMG"] integerValue];
+    (static_cast<MyoWebsocket *>(observer))->toggleEMG(toggleEMGValue);
+}
+
 #pragma mark Hub run loop
 
 void MyoWebsocket::run() {
@@ -71,6 +78,9 @@ void MyoWebsocket::run() {
 
     // Listen for device information from websocket
     CFNotificationCenterAddObserver(CFNotificationCenterGetLocalCenter(), this, MyoWebsocket::tryConnectHandler, (CFStringRef)kTryConnect, NULL, CFNotificationSuspensionBehaviorDeliverImmediately);
+
+    // Listen for events from Settings
+    CFNotificationCenterAddObserver(CFNotificationCenterGetLocalCenter(), this, MyoWebsocket::toggleEMGHandler, (CFStringRef)kToggleEMG, NULL, CFNotificationSuspensionBehaviorDeliverImmediately);
 
     tryConnect();
 }
@@ -224,4 +234,19 @@ void MyoWebsocket::notifyUserAction() {
     }
     std::cout << "MyoWebsocket::notifyUserAction: " << std::endl;
     myo->notifyUserAction();
+}
+
+
+void MyoWebsocket::toggleEMG(int toggleEMGValue) {
+    std::cout << "MyoWebsocket::toggleEMG: " << toggleEMGValue << std::endl;
+    switch (toggleEMGValue) {
+        case 0:
+            myo->setStreamEmg(myo::Myo::streamEmgDisabled);
+            break;
+        case 1:
+            myo->setStreamEmg(myo::Myo::streamEmgEnabled);
+            break;
+        default:
+            break;
+    }
 }

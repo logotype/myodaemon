@@ -21,6 +21,7 @@ Features
 + Connect multiple computers/devices to the same Myo
 + Packages Myo data into "frames" (MyoJS stores frames in a circular buffer, to determine movements over time)
 + Clean, lightweight and documented code
++ Access to raw EMG data
 + Reports framerate and RSSI
 + Resumes service after system wake-up
 
@@ -94,7 +95,7 @@ Authors
 Copyright and license
 ---------------------
 
-Copyright © 2014 logotype
+Copyright © 2015 logotype
 
 Author: Victor Norgren
 

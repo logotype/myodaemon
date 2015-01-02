@@ -25,6 +25,7 @@ public:
     static void lockHandler(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo);
     static void notifyUserActionHandler(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo);
     static void tryConnectHandler(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo);
+    static void toggleEMGHandler(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo);
 
     void run();
     void tryConnect();
@@ -35,6 +36,7 @@ public:
     void unlock(int unlockValue);
     void lock();
     void notifyUserAction();
+    void toggleEMG(int toggleEMGValue);
 private:
 };
 #endif /* defined(__MyoWebsocket__) */

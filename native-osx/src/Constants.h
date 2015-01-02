@@ -10,6 +10,7 @@
 #define kRequestConnectivityStatusDisconnected @"requestConnectivityStatusDisconnected"
 #define kRequestConnectivityStatusNoDongle @"requestConnectivityStatusNoDongle"
 #define kRequestRSSI @"requestRSSI"
+#define kToggleEMG @"toggleEMG"
 #define kToggleEuler @"toggleEuler"
 #define kToggleWebApps @"toggleWebApps"
 
