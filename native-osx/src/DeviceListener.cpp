@@ -181,7 +181,7 @@ void DeviceListener::onOrientationData(myo::Myo *myo, uint64_t timestamp, const 
         [frame setValue:eulerDictionary forKey:@"euler"];
     }
     
-    [frame setValue:@(timestamp) forKey:@"timestamp"];
+    [frame setValue:[NSString stringWithFormat:@"%@",@(timestamp)] forKey:@"timestamp"];
     sendData(FALSE);
 }
 
