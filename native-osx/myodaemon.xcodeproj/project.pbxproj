@@ -214,7 +214,7 @@
 		3749464819455AD800111541 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = logotype;
 			};
 			buildConfigurationList = 3749464B19455AD800111541 /* Build configuration list for PBXProject "myodaemon" */;
@@ -323,6 +323,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -407,12 +408,14 @@
 					"$(PROJECT_DIR)/libs/boost",
 					"$(PROJECT_DIR)/libs/boost/stage/lib",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = (
 					"-lboost_system",
 					"-lboost_thread",
+					"-lboost_chrono",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "logotype.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SYMROOT = "$(PROJECT_DIR)/../build/";
@@ -451,12 +454,14 @@
 					"$(PROJECT_DIR)/libs/boost",
 					"$(PROJECT_DIR)/libs/boost/stage/lib",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = (
 					"-lboost_system",
 					"-lboost_thread",
+					"-lboost_chrono",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "logotype.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SYMROOT = "$(PROJECT_DIR)/../build/";
