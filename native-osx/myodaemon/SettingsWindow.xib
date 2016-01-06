@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14C106a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="SettingsWindow">
@@ -63,7 +63,7 @@
                         <rect key="frame" x="258" y="53" width="277" height="28"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="left" id="Czc-at-Yfy">
                             <font key="font" metaFont="system" size="10"/>
-                            <string key="title">Copyright © 2015 logotype (Victor Norgren).
+                            <string key="title">Copyright © 2016 logotype (Victor Norgren).
 All rights reserved.</string>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -74,12 +74,12 @@ All rights reserved.</string>
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
                             <tabViewItem label="Connection" identifier="1" id="oMn-Zs-PQ3" userLabel="Connection">
-                                <view key="view" id="Odx-LX-YkT">
-                                    <rect key="frame" x="10" y="33" width="300" height="164"/>
+                                <view key="view" ambiguous="YES" id="Odx-LX-YkT">
+                                    <rect key="frame" x="10" y="33" width="139" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mhf-0N-1JU" userLabel="labelConnection">
-                                            <rect key="frame" x="30" y="142" width="259" height="17"/>
+                                            <rect key="frame" x="30" y="-22" width="259" height="17"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="left" title="Reading Myo settings..." id="lWN-ha-us0">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
@@ -87,7 +87,7 @@ All rights reserved.</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XHt-oc-QQ6" userLabel="labelFPS">
-                                            <rect key="frame" x="10" y="107" width="279" height="17"/>
+                                            <rect key="frame" x="10" y="-57" width="279" height="17"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="left" title="Reading framerate..." id="N70-De-CwL">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -95,7 +95,7 @@ All rights reserved.</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zfh-5N-pJZ" userLabel="labelFPS">
-                                            <rect key="frame" x="10" y="90" width="279" height="17"/>
+                                            <rect key="frame" x="10" y="-74" width="279" height="17"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="left" id="RVR-B1-FsZ">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -103,11 +103,11 @@ All rights reserved.</string>
                                             </textFieldCell>
                                         </textField>
                                         <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mur-p7-vs6" userLabel="LevelRSSI">
-                                            <rect key="frame" x="12" y="54" width="275" height="12"/>
+                                            <rect key="frame" x="12" y="-110" width="275" height="12"/>
                                             <levelIndicatorCell key="cell" alignment="left" doubleValue="-100" minValue="-100" maxValue="-30" warningValue="-65" criticalValue="-85" levelIndicatorStyle="relevancy" id="9Qq-LA-dZz"/>
                                         </levelIndicator>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="enq-l2-huQ" userLabel="labelRSSI">
-                                            <rect key="frame" x="10" y="69" width="279" height="17"/>
+                                            <rect key="frame" x="10" y="-95" width="279" height="17"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="left" title="Reading RSSI..." id="6bJ-Bu-zaN">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -115,7 +115,7 @@ All rights reserved.</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NOm-6D-GvY" userLabel="labelServer">
-                                            <rect key="frame" x="10" y="27" width="279" height="17"/>
+                                            <rect key="frame" x="10" y="-137" width="279" height="17"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="left" title="WebSocket server" id="9dD-YG-MCV">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -123,7 +123,7 @@ All rights reserved.</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gbf-c8-BfI" userLabel="labelServerURL">
-                                            <rect key="frame" x="10" y="10" width="279" height="17"/>
+                                            <rect key="frame" x="10" y="-154" width="279" height="17"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="left" title="ws://localhost:6450/" id="RCC-Ez-Kn3">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -131,7 +131,7 @@ All rights reserved.</string>
                                             </textFieldCell>
                                         </textField>
                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WBw-9y-b2a">
-                                            <rect key="frame" x="12" y="142" width="15" height="15"/>
+                                            <rect key="frame" x="12" y="-22" width="15" height="15"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="oPf-4U-FgH"/>
                                         </imageView>
                                     </subviews>
