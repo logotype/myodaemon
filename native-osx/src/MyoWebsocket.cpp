@@ -238,6 +238,10 @@ void MyoWebsocket::notifyUserAction() {
 
 
 void MyoWebsocket::toggleEMG(int toggleEMGValue) {
+    if (!isConnected || myo == NULL) {
+        std::cout << "MyoWebsocket::toggleEMG: not connected" << std::endl;
+        return;
+    }
     std::cout << "MyoWebsocket::toggleEMG: " << toggleEMGValue << std::endl;
     switch (toggleEMGValue) {
         case 0:

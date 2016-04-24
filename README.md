@@ -28,7 +28,7 @@ Features
 MyoJS - JavaScript framework for the Myo
 -----------
 
-[Check out MyoJS here](https://github.com/logotype/myojs).
+[Check out MyoJS here](https://github.com/logotype/MyoJS).
 
 
 JSON protocol

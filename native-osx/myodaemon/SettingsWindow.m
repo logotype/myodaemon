@@ -133,7 +133,7 @@
 }
 
 - (IBAction)onJSButtonSourceClick:(id)sender {
-    NSURL *url = [NSURL URLWithString:@"https://github.com/logotype/myoJS"];
+    NSURL *url = [NSURL URLWithString:@"https://github.com/logotype/MyoJS"];
     if( ![[NSWorkspace sharedWorkspace] openURL:url] )
         NSLog(@"Failed to open url: %@",[url description]);
 }
